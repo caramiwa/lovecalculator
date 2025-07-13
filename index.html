@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator ❤️</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+      }
+      h1 {
+        color: #ff4e50;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid #ff4e50;
+        border-radius: 6px;
+        font-size: 16px;
+        text-align: center;
+      }
+      button {
+        background: #ff4e50;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      button:hover {
+        background: #ff6f61;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #ff4e50;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>💖 Love Calculator 💖</h1>
+      <input type="text" id="name1" placeholder="Your Name" />
+      <input type="text" id="name2" placeholder="Crush's Name" />
+      <br />
+      <button id="calculateBtn">Calculate Love %</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function loveCalculator() {
+        var n = Math.random();
+        n = n * 100;
+        n = Math.floor(n) + 1;
+        return n;
+      }
+
+      document
+        .getElementById("calculateBtn")
+        .addEventListener("click", function () {
+          const lovePercentage = loveCalculator();
+          document.getElementById(
+            "result"
+          ).innerText = `Love Score: ${lovePercentage}% ❤️`;
+        });
+    </script>
+  </body>
+</html>
