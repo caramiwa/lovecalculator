@@ -15,7 +15,8 @@ function FizzBuzz(){
         output.push(i);
      }
         
-    console.log(output);
+
 }
+        console.log(output);
 }
 FizzBuzz();
